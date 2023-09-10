@@ -29,7 +29,7 @@ Eshna offers a range of services and resources, including:
 
 To get started with Eshna, follow these steps:
 
-1. **Clone the Repository**: `git clone https://github.com/yourusername/eshna.git`
+1. **Clone the Repository**: `git clone https://github.com/swarupe7/eshna.git`
 2. **Install Dependencies**: Ensure you have the necessary dependencies installed.
 3. **Configure EmailJS**: Set up EmailJS with your email service credentials.
 4. **Run the Project Locally**: Use `npm start` or your preferred method to run the project locally.
