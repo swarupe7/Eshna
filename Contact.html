@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+    <link rel="stylesheet" href="CM4.css">
+    <link rel="icon" type="image/x-icon" href="./Eshna.png">
+</head>
+<body style="background-image: url(./remove.png);">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color:pink;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    background-color:lightblue ;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+a {
+  color: #333;
+}
+    </style>
+	<h1 style="text-align: center;padding-top: 15px;">Contact Us</h1>
+	<p>Feel free to get in touch with us using the contact form below, or via phone or email.</p>
+
+	<h2>Contact Form</h2>
+	<form  id="contact-form">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="phn">Phn No:</label>
+		<input type="text" id="phn" name="phn" required>
+
+		<label for="subject">Subject:</label>
+		<input type="text" id="subject" name="subject" required>
+
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" required></textarea>
+
+		<input type="submit" value="Send">
+	</form>
+
+	<h2>Contact Information</h2>
+	<ul>
+		<li>Phone: +91 7382127677</li>
+		<li>Email: suryatejaswini.a@gmail.com</li>
+		
+	</ul>
+
+      
+    <!-- Include the Email.js library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize Email.js with your User ID
+        emailjs.init("64zD6-p6GzC-N1OS8"); // Replace with your User ID
+
+        // Function to send the form data via Email.js
+        function sendForm() {
+            const form = document.getElementById("contact-form");
+            emailjs.sendForm("service_op5ntjb", "template_cmbmfhj", form)
+                .then(function(response) {
+                    console.log("Email sent successfully:", response);
+                    // You can add a success message or redirect the user here
+                }, function(error) {
+                    console.error("Email send failed:", error);
+                    // Handle the error and provide user feedback
+                });
+        }
+
+        // Attach the sendForm function to the form submission event
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            sendForm(); // Call the sendForm function to send the email
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshna</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/x-icon" href="./Eshna.png">
+
+    <style>
+          html {
+    min-height: 100%;
+    cursor: url('https://img.freepik.com/free-vector/woman-shadow-pink-painting-background_53876-99499.jpg?w=1060&t=st=1691383609~exp=1691384209~hmac=12f3ff8ef3fdb430e5314aa82ddb1cf56ccb288ea50def58bc8081d22097ac77'), auto;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: block; /* Change to block layout for smaller screens */
+        background-image: none; /* Remove background image on smaller screens */
+        background-color: #151b20; /* Change background color */
+    }
+
+    .content {
+        max-width: 100%; /* Make the content width 100% on smaller screens */
+        margin: 0;
+        padding: 10px; /* Reduce padding */
+    }
+
+    .Launch {
+        display: block; /* Change to block layout for smaller screens */
+        margin: 20px auto; /* Center the button */
+        left: 0; /* Reset left position */
+        top: 0; /* Reset top position */
+    }
+}
+
+    body {
+         display: flex;
+        justify-content: center;
+        font-family: 'Lora', serif;
+        margin: .8em;
+        background-color: #151b20;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://img.freepik.com/free-vector/woman-shadow-pink-painting-background_53876-99499.jpg?w=1060&t=st=1691383609~exp=1691384209~hmac=12f3ff8ef3fdb430e5314aa82ddb1cf56ccb288ea50def58bc8081d22097ac77);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+        /* Optional: Add a class for responsive content styles */
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+       
+      </style>
+    </head>
+    <body>
+      <div style="position: relative; left: 0; top: 0;">
+      </div>
+      <style>
+        .Launch{
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          position:absolute;
+          top: 400px;
+          left: 750px; 
+          padding: 20px 40px; 
+          background-color:ghostwhite;
+          color: white; 
+          border: none; 
+          border-radius: 35px; 
+          cursor: pointer; 
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          color:deeppink;
+          font-size: 20px;
+          
+
+        }
+      </style>
+      <div>
+        <img  style="margin-top: 180px;"src="./home2-removebg.png" id="image">
+          
+        <button id="linkButton" onclick="alert('Welcome to Eshna 😊😊😊!')" class="Launch">Launch</button>
+
+        <script>
+            // JavaScript to handle button click event
+            document.getElementById('linkButton').addEventListener('click', function() {
+                // Redirect to the target web page
+                window.location.href = './testform.html';
+            });
+        </script>
+      </div>
+    </body>
+
+
+</html>
